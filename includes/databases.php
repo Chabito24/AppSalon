@@ -19,14 +19,10 @@ if (!$db) {
   error_log("DB error: " . mysqli_connect_error()); // lo guarda en logs
   die("Error de conexión: Intenta mas tarde"); // die() detiene la ejecución del script inmediatamente.
 
-} else {
+} 
+/**
+ * echo '<pre>'; // organiza el texto
+ * var_dump($db); // muestra db
+ * echo '<pre>';
+ */
 
-  // Si $db tiene un valor válido (objeto/handler de conexión), la conexión fue exitosa.
-  // Imprimimos un mensaje en pantalla (útil en desarrollo; en producción normalmente no se muestra).
-  echo 'Conexión exitosa <br><br>';
-
-}
-
-echo '<pre>'; // organiza el texto
-var_dump($db); // muestra db
-echo '<pre>';
